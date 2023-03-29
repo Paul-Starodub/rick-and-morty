@@ -15,8 +15,9 @@
 ### How to run(for macOs):
 - Create venv: `python3 -m venv venv`
 - Activate it: `source venv/bin/activate`
-- Rename .env.sample file to .env file with your secret key
+- Rename .env.sample file to .env file and populate it
 - Install requirements: `pip install -r requirements.txt`
+- Create new Postgres DB & User
 - Run migrations: `python manage.py migrate`
 - Run Redis server: ` docker run -d -p 6379:6379 redis`
 - Run celery worker for task handling: `celery -A rick_and_morty_api worker -l INFO`
